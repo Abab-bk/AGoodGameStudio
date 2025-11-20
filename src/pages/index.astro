@@ -1,38 +1,27 @@
 ---
+import { Image } from "astro:assets"
 import logo from "../assets/company_logo.svg"
+const { ...attrs } = Astro.props;
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>A Good Game Studio</title>
-    <style>
-      body {
-        margin: 0;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: #002fa7;
-        font-family: sans-serif;
-        color: white;
-      }
-      img.logo {
-        width: 200px;
-        height: auto;
-        margin-bottom: 20px;
-      }
-      .subtitle {
-        font-size: 1.2rem;
-        opacity: 0.9;
-      }
-    </style>
-  </head>
+<Image src={logo} alt="" height={300}/>
 
-  <body>
-    <img class="logo" src={logo.src} alt="Logo" />
-    <div class="subtitle">{"A B.I.G GAME IS COMING..."}</div>
-  </body>
-</html>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #002fa7;
+    font-family: sans-serif;
+    color: white;
+  }
+  .subtitle {
+    font-size: 3rem;
+    opacity: 0.9;
+  }
+</style>
+
+<h1 class="subtitle">{"A B.I.G GAME IS COMING..."}</h1>
